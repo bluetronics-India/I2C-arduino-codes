@@ -19,6 +19,41 @@ Running the script can be done using :
 sudo python lcd_i2c.py
 
 
-other programs to try;
+other programs to try:
+
+#!/usr/bin/env python
+import LCD1602
+import time
+
+def setup():
+	LCD1602.init(0x27, 1)	# init(slave address, background light)
+	LCD1602.write(0, 0, 'Greetings!!')
+	LCD1602.write(1, 1, 'from Bluetronics')
+	time.sleep(2)
+
+def loop():
+	space = '                '
+	greetings = 'Thank you for attending this training programme! ^_^'
+	greetings = space + greetings
+	while True:
+		tmp = greetings
+		for i in range(0, len(greetings)):
+			LCD1602.write(0, 0, tmp)
+			tmp = tmp[1:]
+			time.sleep(0.8)
+			LCD1602.clear()
+
+def destroy():
+	pass	
+
+if __name__ == "__main__":
+	try:
+		setup()
+		while True:
+			pass
+	except KeyboardInterrupt:
+		destroy()
+
+
 
 http://www.circuitbasics.com/raspberry-pi-i2c-lcd-set-up-and-programming/
