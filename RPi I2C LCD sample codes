@@ -1,14 +1,24 @@
-The example script will allow you to send text to the screen via I2C. It is very similar to my scripts for the normal 16×2 screen. To download the script directly to your Pi you can use :
+The example script will allow you to send text to the screen via I2C. It is very similar to my scripts for the normal 16×2 screen.
 
+
+
+Step 1 - Give connections and download the program
+
+To download the script directly to your Pi you can use :
 wget https://bitbucket.org/MattHawkinsUK/rpispy-misc/raw/master/python/lcd_i2c.py
-Step 3 – Enable the I2C Interface
+
+
+Step 2 – Enable the I2C Interface
 
 In order to use I2C devices you must enable the interface on your Raspberry Pi. This can be done by following my “Enabling The I2C Interface On The Raspberry Pi” tutorial. By default the I2C backpack will show up on address 0x27.
 
-Step 4 – Run Script
+Step 3 – Run Script
 
 Running the script can be done using :
 
 sudo python lcd_i2c.py
-Hopefully you will see something like this :
-![Alt text](https://www.raspberrypi-spy.co.uk/wp-content/uploads/2015/04/lcd_i2c_screen_01-1024x683.jpg?raw=true "I2C LCD")
+
+
+other programs to try;
+
+http://www.circuitbasics.com/raspberry-pi-i2c-lcd-set-up-and-programming/
